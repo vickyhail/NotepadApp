@@ -5,8 +5,6 @@
 }
 
 .container{
-   
-   
     width: 100vw;
     max-width: 50%;
     margin-left:25%;
@@ -25,6 +23,7 @@
 }
 nav{
     background-color:#023047;
+    
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     color: cornsilk;
@@ -60,3 +59,85 @@ nav ul{
 ul li a{
     text-decoration: none !important;
 }
+
+<style>
+   a{
+        text-decoration: none;
+        list-style: none;
+    }
+    ul{
+        list-style: none;
+    }
+    small{
+        color: rgb(172, 172, 172);
+    }
+
+    .notes{
+        
+     color:#fb8500;
+        border-radius: 1rem;
+        text-align: center;
+    }
+    .container{
+        background-color: #8ecae6 !important;
+        height: auto !important;
+    }
+    nav{
+       /* background-color: #023047 !important;*/
+    }
+
+    .container:hover{
+        transform: scale(1.03);
+        transition: all 1s ease;
+    }
+    .notes:hover{
+        background-color: #ffb703 !important;
+        color: white !important;
+        cursor: pointer;
+        transform: scale(1.03);
+        transition: all 1s ease;
+    }
+    .btn{
+        background-color:#023047;
+        border-radius: 0.4rem;
+        color: white;
+        width: 5rem;
+        height: 2rem;
+        margin-left: 30%;
+        margin-top: 1rem;
+
+    }
+    .btn1{
+        background-color:#023047;
+        border-radius: 0.4rem;
+        color: white;
+        width: 5rem;
+        height: 2rem;
+        margin-top: 1rem;
+
+    }
+    form{
+        margin-left: 20%;
+        padding: 3rem;
+    }
+    form input{
+        margin: 0.5rem;
+        border-radius: 1rem;
+    }
+    .detail{
+        text-align: center;
+        margin-top: 2rem;
+
+    }
+    .form-title{
+        margin-left: 3rem;
+    }
+    .form-textarea{
+        margin-left: 3rem;
+        border-radius: 1rem;
+        box-shadow: 2px 2px 15px rgb(87, 180, 241);
+
+    }
+
+
+</style>
