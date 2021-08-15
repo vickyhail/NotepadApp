@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}
+   Delete Note
+
+{% endblock %}
+
+
+{% block content %}
+
+{% if user.is_authenticated %}
+
+     <h1 style="text-align: center; padding-top: 1rem;">Delete Note:{{ note.title }}</h1>
+
+     <form method="POST">
+        {% csrf_token %}
+        <strong style="margin-left: 28%;"> Are you sure?</strong>
+<br>
+        <button class="btn">Delete</button>
+    
+     </form>
+{% else %}
+     <p style="text-align: center; padding: 2rem;">You're not allowed here 😂😂😂</p>
+  
+{% endif %}
+
+
+
+{% endblock %}

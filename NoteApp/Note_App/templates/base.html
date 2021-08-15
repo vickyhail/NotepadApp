@@ -1,0 +1,137 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> {% block title %} 
+              
+           {% endblock %}
+
+    </title>
+
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>
+<style>
+   a{
+        text-decoration: none;
+        list-style: none;
+    }
+    ul{
+        list-style: none;
+    }
+    small{
+        color: rgb(172, 172, 172);
+    }
+
+    .notes{
+        
+     color:#fb8500;
+        border-radius: 1rem;
+        text-align: center;
+    }
+    .container{
+        background-color: #8ecae6 !important;
+        height: auto !important;
+    }
+    nav{
+        background-color: #023047 !important;
+    }
+    .notes:hover{
+        background-color: #ffb703 !important;
+        color: white !important;
+        cursor: pointer;
+    }
+    .btn{
+        background-color:#023047;
+        border-radius: 0.4rem;
+        color: white;
+        width: 5rem;
+        height: 2rem;
+        margin-left: 30%;
+        margin-top: 1rem;
+
+    }
+    .btn1{
+        background-color:#023047;
+        border-radius: 0.4rem;
+        color: white;
+        width: 5rem;
+        height: 2rem;
+        margin-top: 1rem;
+
+    }
+    form{
+        margin-left: 20%;
+        padding: 3rem;
+    }
+    form input{
+        margin: 0.5rem;
+        border-radius: 1rem;
+    }
+    .detail{
+        text-align: center;
+        margin-top: 2rem;
+
+    }
+    .form-title{
+        margin-left: 3rem;
+    }
+    .form-textarea{
+        margin-left: 3rem;
+        border-radius: 1rem;
+        box-shadow: 2px 2px 15px rgb(87, 180, 241);
+
+    }
+
+
+</style>
+    
+</head>
+<body>
+    <div class="container">
+    <nav>
+        <ul>
+            <li><a href="{% url 'home' %}">Note</a></li>
+            {% if user.is_authenticated %}
+            <li><a href="{% url 'add' %}">Add Note</a></li>
+            <li><a href="{% url 'logout' %}">Logout</a></li>
+            <li>Welcome , {{ user.first_name }}</li>
+            
+
+            {% else %}
+            <li><a href="{% url 'login' %}">Login</a></li>
+            <li><a href="{% url 'register' %}">Register</a></li>
+
+            {% endif%}
+            
+            
+            
+            
+            
+            
+        </ul>
+        <input type="text" placeholder="🔎search">
+    </nav>
+
+    
+    {% block content %}
+
+    
+   
+
+    {% endblock %}
+
+    
+    </div>
+    
+
+
+
+   
+    
+</body>
+</html>
