@@ -12,12 +12,24 @@
            {% endblock %}
 
     </title>
-
-
-    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>
+  
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>
 
     
 </head>
+<style>
+    .notes:hover{
+        background-color: #457b9d !important;
+    }
+    nav ul li a:hover{
+    background-color: white;
+    color: teal;
+    border-radius: .5rem;
+    
+    border 1px solid white;
+
+}
+</style>
 <body>
     <div class="container">
     <nav>
@@ -27,6 +39,7 @@
             <li><a href="{% url 'add' %}">Add Note</a></li>
             <li><a href="{% url 'logout' %}">Logout</a></li>
             <li>Welcome , {{ user.first_name }}</li>
+            <li id="time"></li>
             
 
             {% else %}
@@ -56,9 +69,7 @@
     </div>
     
 
-
-
    
-    
+    <script src="static/script.js"></script>
 </body>
 </html>

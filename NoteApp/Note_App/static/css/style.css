@@ -43,6 +43,7 @@ nav ul li a{
     margin-top: 1rem;
     color: cornsilk;
 }
+
 nav input{
     margin-left: 35%;
     border-radius: 1rem;
@@ -74,7 +75,7 @@ ul li a{
 
     .notes{
         
-     color:#fb8500;
+     color:#457b9d;
         border-radius: 1rem;
         text-align: center;
     }
@@ -91,7 +92,7 @@ ul li a{
         transition: all 1s ease;
     }
     .notes:hover{
-        background-color: #ffb703 !important;
+        background-color: #457b9d !important;
         color: white !important;
         cursor: pointer;
         transform: scale(1.03);
