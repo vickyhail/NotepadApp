@@ -14,8 +14,7 @@ from pathlib import Path
 import os
 from dotenv import load_dotenv
 
-load_dotenv(
-/home/vickyhail/NotepadApp/NoteApp/NoteApp/.env)
+load_dotenv('/home/vickyhail/NotepadApp/NoteApp/NoteApp/.env')
 #load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
